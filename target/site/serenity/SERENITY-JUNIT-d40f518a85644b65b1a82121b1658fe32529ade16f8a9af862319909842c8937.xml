@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="HU-004 Buscador Adidas Fallido/exitoso" skipped="0" tests="2" time="96.44" timestamp="2021-06-13 01:02:24"><testcase name="Buscar producto en Adidas exitoso"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//span[@title='tenis quesoplus']//ancestor::a)[1]" type="java.lang.AssertionError">
+Expected: an element that is visible
+     but: no matching element found by xpath: (//span[@title='tenis quesoplus']//ancestor::a)[1]</failure><system-err>
+Expected: an element that is visible
+     but: no matching element found by xpath: (//span[@title='tenis quesoplus']//ancestor::a)[1]&#13;
+tasks.BuscarProductoEnAdidas.performAs(BuscarProductoEnAdidas.java:28)&#13;
+stepDefinitions.AdidasBuscadorStepDefinitions.buscarElProductoTenisDFUSIOEnElBuscadorExitosoOFallido(AdidasBuscadorStepDefinitions.java:33)&#13;
+cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
+</system-err></testcase></testsuite>
