@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HU-002 Buscador Adidas Aleatorio" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-13T06:04:08" hostname="DESKTOP-3CM9Q4J" time="49.429">
+<testsuite name="HU-002 Buscador Adidas Aleatorio" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-15T14:06:52" hostname="DESKTOP-3CM9Q4J" time="49.29">
   <properties/>
-  <testcase name="Buscar producto en Adidas exitoso" classname="HU-002 Buscador Adidas Aleatorio" time="49.429"/>
+  <testcase name="Buscar producto en Adidas exitoso" classname="HU-002 Buscador Adidas Aleatorio" time="49.29"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 20004
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 9465
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun 13, 2021 1:04:11 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 15, 2021 9:06:57 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
+Jun 15, 2021 9:07:41 AM org.openqa.selenium.os.OsProcess destroy
+SEVERE: Unable to kill process java.lang.ProcessImpl@60b13422
 [Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
         __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
   _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
