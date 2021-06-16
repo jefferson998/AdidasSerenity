@@ -10,5 +10,4 @@ Feature: HU-004 Buscador Adidas Fallido/exitoso
 
     Examples:
       | Escenario                         | Producto        | url                    |
-      | Buscar producto en Adidas exitoso | Tenis 4D FUSIO  | https://www.adidas.co/ |
       | Buscar producto en Adidas Fallido | tenis quesoplus | https://www.adidas.co/ |

@@ -18,16 +18,4 @@ Feature: HU-003 Buscador Adidas Background
       | Tapabocas Adidas (Pack de 3) |
     Then ver el producto y validarlo
 
-  Scenario: Buscar producto en Adidas exitoso
-    When Buscar un producto en el buscador
-      | nameProduct       |
-      | Chanclas Adilette Aqua (UNISEX) |
-    Then ver el producto y validarlo
-
-  Scenario: Buscar producto en Adidas fallido
-    When Buscar un producto en el buscador
-      | nameProduct     |
-      | tenis quesoplus |
-    Then ver el producto y validarlo
-
 
