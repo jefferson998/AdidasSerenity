@@ -1,50 +1,52 @@
-apply plugin: 'java-library'
-apply plugin: 'eclipse'
+defaultTasks 'clean','test','aggregate'
+
+apply plugin: 'java'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+group 'org.automationserenity'
+version '1.0-SNAPSHOT'
 
 repositories {
-    mavenLocal()
     mavenCentral()
-    jcenter()
-
 }
 
 buildscript {
+    project.ext {
+        serenityVersion = '2.3.12'
+    }
     repositories {
         mavenLocal()
-        mavenCentral()
         jcenter()
-
+    }
+    dependencies {
+        classpath('net.serenity-bdd:serenity-gradle-plugin:' + serenityVersion)
     }
 }
 
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+ext {
+    slf4jVersion = '1.7.7'
+    serenityCoreVersion = '2.3.12'
+    junitVersion = '4.13'
+    assertJVersion = '3.8.0'
+    logbackVersion = '1.2.3'
+}
+
 dependencies {
-    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay-webdriver', version: '2.4.34'
-    implementation group: 'net.serenity-bdd', name: 'serenity-screenplay', version: '2.4.34'
-    testImplementation group: 'info.cukes', name: 'cucumber-junit', version: '1.2.6', ext: 'pom'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    testImplementation group: 'junit', name: 'junit', version: '4.13.2'
-    implementation group: 'io.cucumber', name: 'cucumber-testng', version: '6.10.4'
-    implementation group: 'io.cucumber', name: 'cucumber-core', version: '6.10.4'
-    testImplementation group: 'io.cucumber', name: 'cucumber-junit', version: '6.10.4'
-    implementation group: 'io.cucumber', name: 'cucumber-java', version: '6.10.4'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: '2.4.34'
-    implementation group: 'net.serenity-bdd', name: 'serenity-junit', version: '2.4.34'
-    implementation group: 'net.serenity-bdd', name: 'serenity-cucumber', version: '1.9.51'
-    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '2.4.34'
-    implementation group: 'net.serenity-bdd', name: 'serenity-model', version: '2.4.34'
-    testImplementation group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.30'
-
-
-
+    testCompile "net.serenity-bdd:serenity-core:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-junit:${serenityCoreVersion}",
+            "net.serenity-bdd:serenity-screenplay:${serenityCoreVersion}",
+            "junit:junit:${junitVersion}",
+            "org.assertj:assertj-core:${assertJVersion}"
 }
 
 test {
-    ignoreFailures = true
-
-
+    testLogging.showStandardStreams = true
+    systemProperties System.getProperties()
 }
 
 gradle.startParameter.continueOnFailure = true
+
+test.finalizedBy(aggregate)
