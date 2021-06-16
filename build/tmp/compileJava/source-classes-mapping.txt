@@ -4,8 +4,8 @@ driver/SeleniumWebDriver.java
  driver.SeleniumWebDriver
 variablesGlobales/VariablesGlobales.java
  variablesGlobales.VariablesGlobales
-interaction/CambiarmeDeVentana.java
- interaction.CambiarmeDeVentana
+interaction/changeToWindow.java
+ interaction.changeToWindow
 models/Producto.java
  models.Producto
 tasks/BuscarProductoAleatorioAdidas.java
@@ -14,7 +14,5 @@ userInterface/AdidasUserInterface.java
  userInterface.AdidasUserInterface
 interaction/ClickProductoAleatorio.java
  interaction.ClickProductoAleatorio
-interaction/changeToWindow.java
- interaction.changeToWindow
 tasks/BuscarProductoEnAdidas.java
  tasks.BuscarProductoEnAdidas

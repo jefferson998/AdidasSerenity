@@ -3,12 +3,16 @@ Feature: HU-004 Buscador Adidas Fallido/exitoso
   Quiero buscar en el buscador un producto
   Para ver el producto en la pagina
 
-  Scenario Outline:  <Escenario>
-    Given Me encuentro en la pagina de Adidas en la url <url>
-    When Buscar el producto <Producto> en el buscador exitoso o fallido
-    Then ver el producto <Producto> y validarlo si es correcto o incorrecto
+  Scenario:Buscar algo que no exista -->Fallido
+    Given Me encuentro en la pagina de Adidas en la url https://www.adidas.co/
+    When Buscar el producto en el buscador
+    |nameProduct|
+    |Tenis de queso|
+    Then ver el producto y validarlo si se encuentra o no
 
-    Examples:
-      | Escenario                         | Producto        | url                    |
-      | Buscar producto en Adidas exitoso | Tenis 4D FUSIO  | https://www.adidas.co/ |
-      | Buscar producto en Adidas Fallido | tenis quesoplus | https://www.adidas.co/ |
+  Scenario:Buscar un producto existente en la tienda -->Exitoso
+    Given Me encuentro en la pagina de Adidas en la url https://www.adidas.co/
+    When Buscar el producto en el buscador
+      |nameProduct|
+      |Tenis X9000L4|
+    Then ver el producto y validarlo si se encuentra o no
