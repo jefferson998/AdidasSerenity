@@ -1,17 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="2" name="HU-004 Buscador Adidas Fallido/exitoso" skipped="0" tests="2" time="85.82" timestamp="2021-06-16 11:34:55"><testcase name="Buscar algo que no exista --&gt;Fallido"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]" type="java.lang.AssertionError">
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="HU-004 Buscador Adidas Fallido/exitoso" skipped="0" tests="2" time="73.69" timestamp="2021-06-16 01:20:18"><testcase name="Buscar algo que no exista --&gt;Fallido"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]" type="java.lang.AssertionError">
 Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]</failure><system-err>
+     but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]</failure><system-err>
 Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]&#13;
+     but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]&#13;
 tasks.BuscarProductoEnAdidas.performAs(BuscarProductoEnAdidas.java:24)&#13;
 stepDefinitions.AdidasFailPassStepDefinitions.buscarElProductoEnElBuscador(AdidasFailPassStepDefinitions.java:36)&#13;
 cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-</system-err></testcase><testcase name="Buscar un producto existente en la tienda --&gt;Exitoso"><failure message="&#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]" type="java.lang.AssertionError">
-Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]</failure><system-err>
-Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]&#13;
-tasks.BuscarProductoEnAdidas.performAs(BuscarProductoEnAdidas.java:24)&#13;
-stepDefinitions.AdidasFailPassStepDefinitions.buscarElProductoEnElBuscador(AdidasFailPassStepDefinitions.java:36)&#13;
-cucumber.runner.Runner.runPickle(Runner.java:80)&#13;
-</system-err></testcase></testsuite>
+</system-err></testcase><testcase name="Buscar un producto existente en la tienda --&gt;Exitoso"/></testsuite>

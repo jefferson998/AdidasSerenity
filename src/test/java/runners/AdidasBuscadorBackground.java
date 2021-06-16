@@ -12,5 +12,4 @@ import org.junit.runner.RunWith;
         glue = "stepDefinitions",
         snippets = SnippetType.CAMELCASE
 )
-public class AdidasBuscadorBackground {
-}
+public class AdidasBuscadorBackground {}

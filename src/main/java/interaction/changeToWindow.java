@@ -17,8 +17,6 @@ public class changeToWindow implements Interaction {
             }
         }
     }
-
-
     public static Performable on() {
         return Instrumented.instanceOf(changeToWindow.class).withProperties();
     }

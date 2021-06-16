@@ -9,25 +9,12 @@ Feature: HU-003 Buscador Adidas Background
   Scenario: Buscar producto en Adidas
     When Buscar un producto en el buscador
       | nameProduct    |
-      | Tenis 4D FUSIO |
+      | Camiseta Local FC Bayern |
     Then ver el producto y validarlo
 
   Scenario: Buscar producto en Adidas
     When Buscar un producto en el buscador
       | nameProduct                  |
-      | Tapabocas Adidas (Pack de 3) |
+      | Tenis Run Falcon (UNISEX) |
     Then ver el producto y validarlo
-
-  Scenario: Buscar producto en Adidas exitoso
-    When Buscar un producto en el buscador
-      | nameProduct       |
-      | Chanclas Adilette Aqua (UNISEX) |
-    Then ver el producto y validarlo
-
-  Scenario: Buscar producto en Adidas fallido
-    When Buscar un producto en el buscador
-      | nameProduct     |
-      | tenis quesoplus |
-    Then ver el producto y validarlo
-
 

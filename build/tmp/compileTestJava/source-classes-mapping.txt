@@ -2,10 +2,10 @@ runners/AdidasBadRunner.java
  runners.AdidasBadRunner
 stepDefinitions/AdidasBackgroundStepDefinitions.java
  stepDefinitions.AdidasBackgroundStepDefinitions
-runners/AdidasBuscadorAleatorio.java
- runners.AdidasBuscadorAleatorio
 runners/AdidasBuscadorBackground.java
  runners.AdidasBuscadorBackground
+runners/AdidasBuscadorAleatorio.java
+ runners.AdidasBuscadorAleatorio
 stepDefinitions/AdidasBuscadorStepDefinitions.java
  stepDefinitions.AdidasBuscadorStepDefinitions
 runners/AdidasBuscadorRunner.java

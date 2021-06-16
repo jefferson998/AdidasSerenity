@@ -3,6 +3,7 @@ package tasks;
 
 import interaction.ClickProductoAleatorio;
 import interaction.Esperar;
+import interaction.changeToWindow;
 import net.serenitybdd.core.steps.Instrumented;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -16,17 +17,12 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 
 public class BuscarProductoAleatorioAdidas implements Task {
     public static String defaultWindows;
-//    private String producto;
-//
-//    public BuscarProductoAleatorioAdidas(String producto) {
-//        this.producto = producto;
-//    }
 
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(AdidasUserInterface.BTN_CATEGORY_HOMBRE),
-                Switch.toWindow(getNewWindowHandle(actor,defaultWindows)),
+                changeToWindow.on(),
                 Click.on(AdidasUserInterface.BTN_CLOSE_WINDOW_EMERGENTE),
                 WaitUntil.the(AdidasUserInterface.BTN_CATEGORY_TENIS,isVisible())
                         .forNoMoreThan(20).seconds(),
@@ -36,17 +32,7 @@ public class BuscarProductoAleatorioAdidas implements Task {
                 Esperar.estosSegundos(30)
         );
     }
-
     public static BuscarProductoAleatorioAdidas on(){
         return Instrumented.instanceOf(BuscarProductoAleatorioAdidas.class).withProperties();
-    }
-
-    private static String getNewWindowHandle(Actor actor, String currentWindowHandle){
-        for (String windowHandle : BrowseTheWeb.as(actor).getDriver().getWindowHandles()) {
-            if (!windowHandle.equals(currentWindowHandle)) {
-                return windowHandle;
-            }
-        }
-        return null;
     }
 }

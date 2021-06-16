@@ -1,2 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"HU-004 Buscador Adidas Fallido/exitoso","Buscar producto en Adidas exitoso","FAILURE","2021-06-13T01:02:24.681-05:00[America/Bogota]","0.0","96.44"
+"HU-004 Buscador Adidas Fallido/exitoso","Buscar algo que no exista -->Fallido","FAILURE","2021-06-16T13:20:18.877-05:00[America/Bogota]","0.0","47.45"

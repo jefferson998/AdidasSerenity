@@ -1,18 +1,18 @@
 interaction/Esperar.java
  interaction.Esperar
-driver/SeleniumWebDriver.java
- driver.SeleniumWebDriver
-variablesGlobales/VariablesGlobales.java
- variablesGlobales.VariablesGlobales
-interaction/changeToWindow.java
- interaction.changeToWindow
-models/Producto.java
- models.Producto
-tasks/BuscarProductoAleatorioAdidas.java
- tasks.BuscarProductoAleatorioAdidas
 userInterface/AdidasUserInterface.java
  userInterface.AdidasUserInterface
-interaction/ClickProductoAleatorio.java
- interaction.ClickProductoAleatorio
+tasks/BuscarProductoAleatorioAdidas.java
+ tasks.BuscarProductoAleatorioAdidas
+driver/SeleniumWebDriver.java
+ driver.SeleniumWebDriver
 tasks/BuscarProductoEnAdidas.java
  tasks.BuscarProductoEnAdidas
+interaction/changeToWindow.java
+ interaction.changeToWindow
+variablesGlobales/VariablesGlobales.java
+ variablesGlobales.VariablesGlobales
+interaction/ClickProductoAleatorio.java
+ interaction.ClickProductoAleatorio
+models/Producto.java
+ models.Producto

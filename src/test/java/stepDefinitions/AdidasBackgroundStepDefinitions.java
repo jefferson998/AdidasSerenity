@@ -23,7 +23,8 @@ public class AdidasBackgroundStepDefinitions {
     }
     @When("^Buscar un producto en el buscador$")
     public void buscarUnProductoEnElBuscador(List<Producto> productos) {
-        OnStage.theActorInTheSpotlight().attemptsTo(BuscarProductoEnAdidas.on(productos.get(0).getNameProduct()));
+        OnStage.theActorInTheSpotlight().attemptsTo(BuscarProductoEnAdidas.on(
+                productos.get(0).getNameProduct()));
     }
 
     @Then("^ver el producto y validarlo$")

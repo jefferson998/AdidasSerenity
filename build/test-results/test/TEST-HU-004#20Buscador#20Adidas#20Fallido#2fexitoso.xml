@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HU-004 Buscador Adidas Fallido/exitoso" tests="2" skipped="0" failures="2" errors="0" timestamp="2021-06-16T16:34:55" hostname="DESKTOP-3CM9Q4J" time="90.399">
+<testsuite name="HU-004 Buscador Adidas Fallido/exitoso" tests="2" skipped="0" failures="1" errors="0" timestamp="2021-06-16T18:20:19" hostname="DESKTOP-3CM9Q4J" time="78.004">
   <properties/>
-  <testcase name="Buscar algo que no exista --&gt;Fallido" classname="HU-004 Buscador Adidas Fallido/exitoso" time="49.318">
-    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]" type="java.lang.AssertionError">java.lang.AssertionError: 
+  <testcase name="Buscar algo que no exista --&gt;Fallido" classname="HU-004 Buscador Adidas Fallido/exitoso" time="50.193">
+    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]" type="java.lang.AssertionError">java.lang.AssertionError: 
 Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]
+     but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]
 	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
 	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
 	at net.serenitybdd.screenplay.Actor.should(Actor.java:301)
@@ -31,42 +31,14 @@ Expected: an element that is visible
 	at ✽.Buscar el producto en el buscador(src/test/resources/features/AdidasFallido.feature:8)
 </failure>
   </testcase>
-  <testcase name="Buscar un producto existente en la tienda --&gt;Exitoso" classname="HU-004 Buscador Adidas Fallido/exitoso" time="41.062">
-    <failure message="java.lang.AssertionError: &#10;Expected: an element that is visible&#10;     but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]" type="java.lang.AssertionError">java.lang.AssertionError: 
-Expected: an element that is visible
-     but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]
-	at net.serenitybdd.screenplay.ErrorTally.throwSummaryExceptionFrom(ErrorTally.java:36)
-	at net.serenitybdd.screenplay.ErrorTally.reportAnyErrors(ErrorTally.java:30)
-	at net.serenitybdd.screenplay.Actor.should(Actor.java:301)
-	at net.serenitybdd.screenplay.waits.WaitUntilBuilder$1.performAs(WaitUntilBuilder.java:29)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
-	at net.serenitybdd.screenplay.Actor.performSilently(Actor.java:194)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:167)
-	at tasks.BuscarProductoEnAdidas.performAs(BuscarProductoEnAdidas.java:24)
-	at tasks.BuscarProductoEnAdidas$$EnhancerByCGLIB$$caf6f3f3.CGLIB$performAs$0(&lt;generated&gt;)
-	at tasks.BuscarProductoEnAdidas$$EnhancerByCGLIB$$caf6f3f3$$FastClassByCGLIB$$d0d27941.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:460)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:445)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:420)
-	at net.thucydides.core.steps.StepInterceptor.runOrSkipMethod(StepInterceptor.java:175)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:162)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:68)
-	at tasks.BuscarProductoEnAdidas$$EnhancerByCGLIB$$caf6f3f3.performAs(&lt;generated&gt;)
-	at net.serenitybdd.screenplay.Actor.performTask(Actor.java:233)
-	at net.serenitybdd.screenplay.Actor.perform(Actor.java:214)
-	at net.serenitybdd.screenplay.Actor.attemptsTo(Actor.java:171)
-	at stepDefinitions.AdidasFailPassStepDefinitions.buscarElProductoEnElBuscador(AdidasFailPassStepDefinitions.java:36)
-	at ✽.Buscar el producto en el buscador(src/test/resources/features/AdidasFallido.feature:15)
-</failure>
-  </testcase>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 42366
+  <testcase name="Buscar un producto existente en la tienda --&gt;Exitoso" classname="HU-004 Buscador Adidas Fallido/exitoso" time="27.778"/>
+  <system-out><![CDATA[el producto: Tenis X9000L4
+]]></system-out>
+  <system-err><![CDATA[Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 46333
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun 16, 2021 11:34:58 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 16, 2021 1:20:22 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
            __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
@@ -79,24 +51,22 @@ INFO: Detected dialect: W3C
 TEST FAILED: Buscar algo que no exista -->Fallido
 --------------------------------------------------------------------------
 [Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Jefferson buscar producto en adidas
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected: an element that is visible but: no matching element found by xpath: (//span[@title='Tenis de queso']//ancestor::a)[1]
-Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 41459
+[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected: an element that is visible but: no matching element found by xpath: (//img[contains(@title,'Tenis de queso')]//ancestor::a)[1]
+Starting ChromeDriver 91.0.4472.19 (1bf021f248676a0b2ab3ee0561d83a59e424c23e-refs/branch-heads/4472@{#288}) on port 23142
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Jun 16, 2021 11:35:46 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+Jun 16, 2021 1:21:11 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - 
-           __  _____ _____ ____ _____   _____ _    ___ _     _____ ____  
-  _       / / |_   _| ____/ ___|_   _| |  ___/ \  |_ _| |   | ____|  _ \ 
- (_)_____| |    | | |  _| \___ \ | |   | |_ / _ \  | || |   |  _| | | | |
-  _|_____| |    | | | |___ ___) || |   |  _/ ___ \ | || |___| |___| |_| |
- (_)     | |    |_| |_____|____/ |_|   |_|/_/   \_\___|_____|_____|____/ 
-          \_\                                                            
+[Test worker] INFO net.thucydides.core.steps.ConsoleLoggingListener - 
+        __    _____ _____ ____ _____   ____   _    ____  ____  _____ ____  
+  _     \ \  |_   _| ____/ ___|_   _| |  _ \ / \  / ___|/ ___|| ____|  _ \ 
+ (_)_____| |   | | |  _| \___ \ | |   | |_) / _ \ \___ \\___ \|  _| | | | |
+  _|_____| |   | | | |___ ___) || |   |  __/ ___ \ ___) |___) | |___| |_| |
+ (_)     | |   |_| |_____|____/ |_|   |_| /_/   \_\____/|____/|_____|____/ 
+        /_/                                                                
 
-TEST FAILED: Buscar un producto existente en la tienda -->Exitoso
---------------------------------------------------------------------------
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - TEST FAILED AT STEP Jefferson buscar producto en adidas
-[Test worker] ERROR net.thucydides.core.steps.ConsoleLoggingListener - Expected: an element that is visible but: no matching element found by xpath: (//span[@title='Tenis X9000L4']//ancestor::a)[1]
+TEST PASSED: Buscar un producto existente en la tienda -->Exitoso
+----------------------------------------------------------------------------
 ]]></system-err>
 </testsuite>
